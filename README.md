@@ -3,6 +3,8 @@
 
 Объект тесирования: форма регистрации/авторизации сайта: https://b2c.passport.rt.ru
 
+Ссылка на тест-кейсы:https://docs.google.com/spreadsheets/d/1KR9YveSlfP6K9URd9IrNzYys2-lVZ4cU/edit?usp=sharing&ouid=106506738859926605963&rtpof=true&sd=true
+
 Предусловие:
 1. Файл chromedriver.exe расположен: \Python 3.10\Scripts
 2. Версия браузера Google Chrome: 106.0.5249.119
