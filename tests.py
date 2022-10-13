@@ -4,7 +4,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Chrome()
-from settings import login_url, valid_phone_number, valid_password, valid_email
+from settings import login_url, valid_phone_number, valid_password, valid_email, valid_account_number, invalid_password, \
+    invalid_email, empty_email, empty_password, name, surname, new_email, lesser_password, bigger_password, \
+    cyrillic_password, no_caps_password, no_numbers_password, empty_phone_number
 import time
 
 '''1.Авторизация клиента по номеру телефона, раздел "Телефон"'''
