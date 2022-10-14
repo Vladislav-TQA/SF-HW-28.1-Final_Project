@@ -9,7 +9,7 @@ from settings import login_url, valid_phone_number, valid_password, valid_email,
     cyrillic_password, no_caps_password, no_numbers_password, empty_phone_number, valid_login
 import time
 
-'''1.Авторизация клиента по номеру телефона, раздел "Телефон"'''
+'''1.Авторизация клиента по номеру телефона, вкладка "Телефон"'''
 
 
 def test_phone_login():
@@ -24,7 +24,7 @@ def test_phone_login():
                                '//*[@id="app"]/main/div/div[2]/div[1]/div[2]/div[2]/div/span[2]/span').text == valid_email
 
 
-'''2.Авторизация клиента по электронной почте, раздел "Почта'''
+'''2.Авторизация клиента по электронной почте, вкладка "Почта'''
 
 
 def test_email_login():
@@ -39,7 +39,7 @@ def test_email_login():
                                '//*[@id="app"]/main/div/div[2]/div[1]/div[2]/div[2]/div/span[2]/span').text == valid_email
 
 
-'''3.Авторизация клиента по логину, раздел "Логин"'''
+'''3.Авторизация клиента по логину, вкладка "Логин"'''
 
 
 def test_login_login():
@@ -54,7 +54,7 @@ def test_login_login():
                                '//*[@id="app"]/main/div/div[2]/div[1]/div[2]/div[2]/div/span[2]/span').text == valid_email
 
 
-'''4.Авторизация клиента по лицевому счету, раздел "Лицевой счет"'''
+'''4.Авторизация клиента по лицевому счету, вкладка "Лицевой счет"'''
 
 
 def test_account_number_login():
@@ -70,7 +70,7 @@ def test_account_number_login():
                                '//*[@id="app"]/main/div/div[2]/div[1]/div[2]/div[2]/div/span[2]/span').text == valid_email
 
 
-'''5.Авторизация через почту с верной почтой и неверным паролем'''
+'''5.Авторизация через почту с валидной почтой и невалидным паролем'''
 
 
 def test_valid_email_invalid_password_login():
@@ -85,7 +85,7 @@ def test_valid_email_invalid_password_login():
     assert driver.find_element(By.TAG_NAME, 'h1').text == 'Авторизация'
 
 
-'''6.Авторизация через почту с неверной почтой и верным паролем'''
+'''6.Авторизация через почту с невалидной почтой и валидным паролем'''
 
 
 def test_invalid_email_valid_password_login():
@@ -100,7 +100,7 @@ def test_invalid_email_valid_password_login():
     assert driver.find_element(By.TAG_NAME, 'h1').text == 'Авторизация'
 
 
-'''7.Авторизация через почту с неверной почтой и неверным паролем'''
+'''7.Авторизация через почту с невалидной почтой и невалидным паролем'''
 
 
 def test_invalid_email_invalid_password_login():
