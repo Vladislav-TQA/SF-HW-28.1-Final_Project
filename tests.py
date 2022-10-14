@@ -9,7 +9,7 @@ from settings import login_url, valid_phone_number, valid_password, valid_email,
     cyrillic_password, no_caps_password, no_numbers_password, empty_phone_number, valid_login
 import time
 
-'''1.Авторизация клиента по номеру телефона, вкладка "Телефон"'''
+'''1.Авторизация клиента по номеру телефона'''
 
 
 def test_phone_login():
@@ -24,7 +24,7 @@ def test_phone_login():
                                '//*[@id="app"]/main/div/div[2]/div[1]/div[2]/div[2]/div/span[2]/span').text == valid_email
 
 
-'''2.Авторизация клиента по электронной почте, вкладка "Почта'''
+'''2.Авторизация клиента по email'''
 
 
 def test_email_login():
@@ -39,7 +39,7 @@ def test_email_login():
                                '//*[@id="app"]/main/div/div[2]/div[1]/div[2]/div[2]/div/span[2]/span').text == valid_email
 
 
-'''3.Авторизация клиента по логину, вкладка "Логин"'''
+'''3.Авторизация клиента по логину'''
 
 
 def test_login_login():
@@ -54,7 +54,7 @@ def test_login_login():
                                '//*[@id="app"]/main/div/div[2]/div[1]/div[2]/div[2]/div/span[2]/span').text == valid_email
 
 
-'''4.Авторизация клиента по лицевому счету, вкладка "Лицевой счет"'''
+'''4.Авторизация клиента по лицевому счету'''
 
 
 def test_account_number_login():
@@ -70,7 +70,7 @@ def test_account_number_login():
                                '//*[@id="app"]/main/div/div[2]/div[1]/div[2]/div[2]/div/span[2]/span').text == valid_email
 
 
-'''5.Авторизация через почту с валидной почтой и невалидным паролем'''
+'''5.Авторизация через почту с валидным email и невалидным паролем'''
 
 
 def test_valid_email_invalid_password_login():
@@ -85,7 +85,7 @@ def test_valid_email_invalid_password_login():
     assert driver.find_element(By.TAG_NAME, 'h1').text == 'Авторизация'
 
 
-'''6.Авторизация через почту с невалидной почтой и валидным паролем'''
+'''6.Авторизация через почту с невалидным email и валидным паролем'''
 
 
 def test_invalid_email_valid_password_login():
@@ -100,7 +100,7 @@ def test_invalid_email_valid_password_login():
     assert driver.find_element(By.TAG_NAME, 'h1').text == 'Авторизация'
 
 
-'''7.Авторизация через почту с невалидной почтой и невалидным паролем'''
+'''7.Авторизация через почту с невалидной email и невалидным паролем'''
 
 
 def test_invalid_email_invalid_password_login():
@@ -115,7 +115,7 @@ def test_invalid_email_invalid_password_login():
     assert driver.find_element(By.TAG_NAME, 'h1').text == 'Авторизация'
 
 
-'''8.Авторизация через почту с пустой почтой и пустым паролем'''
+'''8.Авторизация через email с пустыми полями почта и пароль'''
 
 
 def test_empty_email_empty_password_login():
