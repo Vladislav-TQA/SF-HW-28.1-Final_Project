@@ -8,6 +8,7 @@
 Предусловие:
 1. Файл chromedriver.exe расположен: \Python 3.10\Scripts
 2. Версия браузера Google Chrome: 106.0.5249.119
+3. ОС Widows 11 x64
 
 
 
