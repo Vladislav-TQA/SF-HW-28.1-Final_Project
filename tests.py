@@ -263,3 +263,5 @@ def test_empty_email_login():
     WebDriverWait(driver, 7).until(EC.visibility_of_element_located((By.ID, "kc-login"))).click()
     assert driver.find_element(By.XPATH,
                                '//*[@id="page-right"]/div/div/div/form/div[1]/div[2]/span').text == 'Введите адрес, указанный при регистрации'
+    
+driver.close()
